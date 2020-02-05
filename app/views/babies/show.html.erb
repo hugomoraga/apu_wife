@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div class="container">
+<h1 align="center">  <%= @baby.name %> </h1>
+<br>
+<ul>
+<li><%= link_to "New Baby", new_baby_path %> </li>
+<li><%= link_to "New Breastfeeding", new_breastfeeding_path %> </li>
+<li><%= link_to "Babies Index", babies_path %> </li>
+<li><%= link_to "Breastfeeding Index", breastfeedings_path %> </li>
+
+</ul>
+
+</div>
+
+<br>
+
+<div class="container">
+  <div class="box">
+   <strong>Name:</strong>
+   <%= @baby.name %>
+  </div>
+
+    <br>
+  <div class="box">
+<%# Cuantas veces tomo pecho hoy %>
+    <strong>Breastfeeding today:</strong>
+    <%= @baby.feeding_times_today %>
+  </div>
+<br>
+<%# Ultima Last breastfeeding today breastfeeding todayez que tomo pecho %>   
+<div class="box">
+    <strong>Last time breastfeeding:</strong>
+    <%= time_ago_in_words(@baby.last_time) %>
+  </div>
+
+<br>
+  <%# Cuanto tiempo tomo pecho hoy en seg %>   
+
+  <div class="box">
+    <strong>Breastfeeding time today:</strong>
+    <%= @baby.feed_time_today %> seg
+  </div>
+  
+<br>
+
+  <%# Cuanto volumen  de echo tomo hoy  %>   
+
+    <div class="box">
+    <strong>Volume Today:</strong>
+    <%= @baby.volume_today %> ml
+  </div>
+  
+<br>
+
+
+
+<%= link_to 'Edit', edit_baby_path(@baby) %> 
+
+</div>

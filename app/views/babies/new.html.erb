@@ -1,0 +1,19 @@
+<div class="container">
+
+<h1 align="center">New Baby</h1>
+
+<ul>
+<li><%= link_to "New Baby", new_baby_path %> </li>
+<li><%= link_to "New Breastfeeding", new_breastfeeding_path %> </li>
+<li><%= link_to "Babies Index", babies_path %> </li>
+<li><%= link_to "Breastfeeding Index", breastfeedings_path %> </li>
+</ul>
+
+</div>
+<br>
+<div class="container">
+
+<div align="center">
+<%= render 'form', baby: @baby %>
+</div>
+<div>

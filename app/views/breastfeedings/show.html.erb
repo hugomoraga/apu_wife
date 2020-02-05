@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<h1 align="center">  <%= @breastfeeding.baby_name %> </h1>
+<br>
+<ul>
+<li><%= link_to "New Baby", new_baby_path %> </li>
+<li><%= link_to "New Breastfeeding", new_breastfeeding_path %> </li>
+<li><%= link_to "Babies Index", babies_path %> </li>
+<li><%= link_to "Breastfeeding Index", breastfeedings_path %> </li>
+
+</ul>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @breastfeeding.volume %>
+</p>
+
+<p>
+  <strong>Feeding time:</strong>
+  <%= @breastfeeding.feeding_time %>
+</p>
+
+<p>
+  <strong>Baby:</strong>
+  <%= @breastfeeding.baby.name %>
+</p>
+
+<%= link_to 'Edit', edit_breastfeeding_path(@breastfeeding) %> |
+<%= link_to 'Back', breastfeedings_path %>
